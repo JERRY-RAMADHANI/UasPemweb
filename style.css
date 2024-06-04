@@ -124,4 +124,78 @@ nav .wrapper{
 
 
 
-/*  */
+/* LIST RUMAH */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #111;
+}
+
+main {
+    margin: 20px;
+}
+
+#wargaList .warga {
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    max-width: 600px;
+    text-align: center;
+}
+
+#wargaList .warga:hover {
+    background-color: #f1f1f1;
+}
+
+#wargaList .warga .details {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#wargaList .warga.active .details {
+    display: block;
+}
+
+.details p {
+    margin: 5px 0;
+}
