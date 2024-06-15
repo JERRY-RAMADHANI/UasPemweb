@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Pengaduan Keamanan Lingkungan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="user_styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#">Sistem Menegement Aduan Warga</a></div>
+            <ul class="nav-ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Aduan</a></li>
+                <li><a href="#" class="text-danger">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--  -->
+    <main>
+        <section class="complaint-section">
+            <h2>Layanan Pengaduan Keamanan Lingkungan</h2>
+            <p>Sampaikan laporan Anda langsung kepada pengurus setempat</p>
+            <form class="complaint-form" id="complaintForm" enctype="multipart/form-data" method="post" action="reports.php">
+                <h3>Sampaikan Laporan Anda</h3>
+                <p>Perhatikan Cara Menyampaikan Pengaduan Yang Baik dan Benar <button type="button" class="help-btn">?</button></p>
+                <label for="judul">Ketik judul Laporan Anda*</label>
+                <input type="text" id="judul" name="judul" required>
+                
+                <label for="isi">Ketik isi Laporan Anda*</label>
+                <textarea id="isi" name="isi" required></textarea>
+                
+                <label for="waktu">Ketik Waktu*</label>
+                <input type="time" id="waktu" name="waktu" required>
+                
+                <button type="submit">Lapor</button>
+            </form>
+        </section>
+        <section class="status-section">
+            <h3>Status Laporan</h3>
+            <div id="reportList">
+                <!-- Status Laporan -->
+            </div>
+        </section>
+    </main>
+    <script src="user_script.js"></script>
+</body>
+</html>

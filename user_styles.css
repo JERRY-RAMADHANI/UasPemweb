@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+nav{
+  width: 100%;
+  background: #242526;
+}
+nav .wrapper{
+  max-width: 1500px;
+  padding: 0px 30px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .logo a{
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-ul{
+  display: inline-flex;
+}
+.nav-ul li{
+  list-style: none;
+}
+.nav-ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.wrapper{
+  margin-bottom: 20px;
+}
+
+.nav-ul{
+  margin-right: 20px;
+}
+
+.nav-ul li a:hover{
+  background: #3A3B3C;
+}
+.nav-ul .mobile-item{
+  display: none;
+}
+.nav-ul li:hover .drop-menu,
+.nav-ul li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+.complaint-section {
+  background-color: #4CAF50;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-section h2, .complaint-section p {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.complaint-section h2 {
+  font-size: 30px;
+}
+
+.complaint-section p {
+  font-size: 24px;
+}
+
+.complaint-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.complaint-form h3 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin: -5px -5px 5px -5px;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-form p {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.complaint-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.complaint-form input, .complaint-form textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.complaint-form textarea {
+  height: 100px;
+}
+
+.complaint-form button {
+  background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.status-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status-section h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.report {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+}
+
+.report h4 {
+  margin: 0;
+  color: #333;
+}
+
+.report p {
+  margin: 5px 0;
+}
