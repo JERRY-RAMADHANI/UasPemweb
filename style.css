@@ -121,7 +121,7 @@ nav .wrapper{
   right: 30px;
   top: 10px;
 }
-
+/*  */
 
 
 /* LIST RUMAH */
@@ -199,3 +199,15 @@ main {
 .details p {
     margin: 5px 0;
 }
+/*  */
+
+
+
+
+
+/* Custom Components */
+.thead-custom {
+  background-color: #000;
+  color: #fff;
+}
+/*  */
