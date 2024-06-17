@@ -14,7 +14,7 @@
             <ul class="nav-ul">
                 <li><a href="HomeUser.php">Home</a></li>
                 <li><a href="pageprofil.php">Profile</a></li>
-                <li><a href="#">Aduan</a></li>
+                <li><a href="user.html">Aduan</a></li>
                 <li><a href="#" class="text-danger">Log Out</a></li>
             </ul>
         </div>

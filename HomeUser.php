@@ -1,3 +1,13 @@
+<?php
+include 'index.php';
+
+
+$sql = "SELECT * FROM berita";
+
+$result = $conn->query($sql);
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -13,12 +23,12 @@
     <!-- NAVBAR -->
     <nav>
         <div class="wrapper">
-            <div class="logo"><a href="#">Sistem Menegement aduan warga</a></div>
+            <div class="logo"><a href="HomeUser.php">Sistem Menegement aduan warga</a></div>
             <ul class="nav-ul">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Aduan</a></li>
-                <li><a href="#" class="text-danger">Log Out</a></li>
+                <li><a href="HomeUser.php">Home</a></li>
+                <li><a href="pageprofil.php">Profile</a></li>
+                <li><a href="user.html">Aduan</a></li>
+                <li><a href="login.html" class="text-danger">Log Out</a></li>
             </ul>
         </div>
     </nav>
@@ -26,17 +36,36 @@
 
     <!-- Berita -->
     <section class="mt-5">
-        <div class="container">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+    <div class="container">
+        <div class="row">
+            <?php
+            if ($result->num_rows > 0) {
+                $counter = 0;
+                while($row = $result->fetch_assoc()) {
+                    if ($counter % 3 == 0 && $counter != 0) {
+                        echo '</div><div class="row">';
+                    }
+                    ?>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top" src="background.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $row['Judul']; ?></h5>
+                                <p class="card-text"><?php echo $row['Subject']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                    $counter++;
+                }
+            } else {
+                echo "0 results";
+            }
+            $conn->close();
+            ?>
         </div>
-    </section>
+    </div>
+</section>
     <!--  -->
 
     <!-- FOOTER -->
@@ -159,7 +188,7 @@
         </section>
         <!-- Section: Links  -->
 
-        
+
     </footer>
     <!--  -->
 

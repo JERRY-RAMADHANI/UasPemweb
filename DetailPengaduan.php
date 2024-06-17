@@ -56,12 +56,12 @@ if ($stmt->execute()) {
     <!-- NAVBAR -->
     <nav>
         <div class="wrapper">
-            <div class="logo"><a href="#">Sistem Management Aduan Warga</a></div>
+            <div class="logo"><a href="HomeAdmin.php">Sistem Menegement aduan warga</a></div>
             <ul class="nav-ul">
-                <li><a href="#">Aduan</a></li>
-                <li><a href="#">List Rumah</a></li>
-                <li><a href="#">List Staff</a></li>
-                <li><a href="#" class="text-danger">Log Out</a></li>
+                <li><a href="HomeAdmin.php">Aduan</a></li>
+                <li><a href="ListRumah.html">List Rumah</a></li>
+                <li><a href="ListStaff.php">List Staff</a></li>
+                <li><a href="login.html" class="text-danger">Log Out</a></li>
             </ul>
         </div>
     </nav>

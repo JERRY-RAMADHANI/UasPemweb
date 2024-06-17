@@ -1,5 +1,4 @@
 <?php
-
 include 'db_connection.php';
 
 session_start();
@@ -20,20 +19,24 @@ $stmt->bind_param("ss", $username, $password);
 $stmt->execute();
 $result = $stmt->get_result();
 
-$response = array();
 if ($result->num_rows > 0) {
   $user = $result->fetch_assoc();
   $_SESSION['user_id'] = $user['ID'];
-  $response['success'] = true;
-  $response['username'] = $user['Username'];
-  $response['role'] = $role;
+  
+  // Redirect based on role
+  if ($role == 'admin') {
+    header('Location: HomeAdmin.php');
+  } else {
+    header('Location: HomeUser.php');
+  }
+  exit(); // Ensure script termination after redirection
 } else {
-  $response['success'] = false;
-  $response['message'] = "Invalid username or password.";
+  // Handle invalid login
+  $_SESSION['error'] = "Invalid username or password.";
+  header('Location: login_page.php'); // Redirect back to the login page
+  exit();
 }
 
 $stmt->close();
 $conn->close();
-
-echo json_encode($response);
 ?>

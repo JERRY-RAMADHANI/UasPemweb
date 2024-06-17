@@ -24,12 +24,12 @@ $result = $conn->query($sql);
     <!-- NAVBAR -->
     <nav>
         <div class="wrapper">
-            <div class="logo"><a href="#">Sistem Menegement aduan warga</a></div>
+            <div class="logo"><a href="HomeAdmin.php">Sistem Menegement aduan warga</a></div>
             <ul class="nav-ul">
-                <li><a href="#">Aduan</a></li>
-                <li><a href="#">List Rumah</a></li>
-                <li><a href="#">List Staff</a></li>
-                <li><a href="#" class="text-danger">Log Out</a></li>
+                <li><a href="HomeAdmin.php">Aduan</a></li>
+                <li><a href="ListRumah.html">List Rumah</a></li>
+                <li><a href="ListStaff.php">List Staff</a></li>
+                <li><a href="login.html" class="text-danger">Log Out</a></li>
             </ul>
         </div>
     </nav>
@@ -43,7 +43,6 @@ $result = $conn->query($sql);
                     <tr>
                         <th scope="col">Nama</th>
                         <th scope="col">Role</th>
-                        <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,9 +50,6 @@ $result = $conn->query($sql);
                         <tr>
                             <td><?= htmlspecialchars($row["Username"]) ?></td>
                             <td><?= htmlspecialchars($row["Role"]) ?></td>
-                            <td>
-                                <a href="DetailPengaduan.php?ID=<?= $row["ID"] ?>" class="btn btn-primary">Aksi</a>
-                            </td>
                         </tr>
                     <?php endforeach; ?>
                     <?php if ($result->num_rows == 0) : ?>
